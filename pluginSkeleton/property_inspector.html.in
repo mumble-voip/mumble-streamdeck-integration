@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>info.mumble.mumble property inspector</title>
+		<link rel="stylesheet" href="css/sdpi.css">
+	</head>
+
+	<body>
+		<!--
+	  		The principle is the following: We write blocks specific to the different actions in the
+			Mumble Stream Deck plugin in here where each top-level block (div) has the UUID of the associated
+			action. The JavaScript part of the property inspector then takes care of hiding and showing
+			these blocks based on what action the inspector was invoked on (determined by the UUID).
+	  	--!>
+		<div class="sdpi-wrapper" id="main-container">
+			<!-- Join Channel action !-->
+			<div id="${MUMBLE_STREAMDECK_JOIN_CHANNEL_ACTION_UUID}">
+				<div class="sdpi-item" id="join_channel__channel_name_item">
+                	<div class="sdpi-item-label">Channel name</div>
+					<input class="sdpi-item-value"
+					       type="text"
+						   id="join_channel__channel_name"
+						   settings_key="${MUMBLE_STREAMDECK_CHANNEL_JOIN_ACTION_CHANNEL_NAME_SETTING}"
+						   value=""
+						   placeholder="Enter channel name"
+						   required>
+            	</div>
+
+				<div class="sdpi-item" id="join_channel__channel_password_item">
+                	<div class="sdpi-item-label">Password</div>
+                	<input class="sdpi-item-value"
+					       type="password"
+						   id="join_channel__channel_password"
+						   settings_key="${MUMBLE_STREAMDECK_CHANNEL_JOIN_ACTION_CHANNEL_PASSWORD_SETTING}"
+						   value=""
+						   placeholder="Enter channel password">
+            	</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="property_inspector.js"></script>
+</html>

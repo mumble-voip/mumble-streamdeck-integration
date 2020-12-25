@@ -1,0 +1,7 @@
+[submodule "3rdParty/websocketpp"]
+	path = 3rdParty/websocketpp
+	url = https://github.com/zaphoyd/websocketpp.git
+[submodule "3rdParty/nlohmann"]
+	path = 3rdParty/nlohmann
+	url = https://github.com/nlohmann/json.git
+	branch = release/3.9.1
