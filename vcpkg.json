@@ -1,0 +1,14 @@
+{
+	"name": "mumble-streamdeck-integration",
+	"version-string": "0.1.0",
+	"dependencies": [
+		"boost-random",
+		"boost-system",
+		"boost-thread",
+		"boost-regex",
+		"boost-filesystem",
+		"boost-asio",
+		"boost-process"
+	]
+}
+
